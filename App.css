@@ -1,0 +1,260 @@
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.form {
+  margin-bottom: 20px;
+  border: solid 2px #F5F5F5;
+  border-radius: 23px;
+  background-color: #F5F5F5;
+  float: left;
+  padding-top: 30px;
+  padding: 30px;
+
+}
+label{
+  float: left;
+  font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+color: #000000;
+margin-bottom: 8px;
+margin-top: 15px;
+}
+input{
+  
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 12px;
+gap: 4px;
+
+width: 547.56px;
+height: 32px;
+
+/* colorBgContainer */
+
+background: #FFFFFF;
+/* colorBorder */
+
+border: 1px solid rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
+z-index: 0;
+}
+.in{
+  padding-left: 220px;
+}
+.inp{
+  float: right;
+}
+.ip{
+  float: left;
+}
+.button-container {
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  margin-right: 10px;
+}
+
+.tooltip-preview {
+  height: 597px;
+  width: 280px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.25);
+  border: 17px solid #2C2C2C;
+  float: right;
+  border-radius: 28px;
+  display: inline-block;
+}
+
+.tooltip-button {
+width: 76px;
+height: 34px;
+padding: 8px;
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+  border-radius: 4px;
+/* identical to box height, or 112% */
+
+
+color: #000000;
+background-color: white;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-preview:hover .tooltip {
+  visibility: visible;
+}
+
+.tooltip-preview:hover .tooltip {
+  opacity: 1;
+}
+.tooltip-button5{
+
+  border-color: #FFFFFF;
+  float: right;
+  margin-right: 40px;
+  margin-top: 185px;
+  width: 76px;
+  height: 34px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 4px 4px;
+  /* identical to box height, or 112% */
+  
+  
+  color: #000000;
+  background-color: white;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.tooltip-button4{
+  float: left;
+  
+  margin-left: 40px;
+  margin-top: 470px;
+  width: 76px;
+height: 34px;
+padding: 8px;
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+border-radius: 4px;
+border-color: #FFFFFF;
+/* identical to box height, or 112% */
+
+
+color: #000000;
+background-color: white;
+
+
+}
+.tooltip-button3{
+  border-color: #FFFFFF;
+  margin-right: 80px;
+ float: center;
+ margin-top: 150px;
+  width: 76px;
+height: 34px;
+padding: 8px;
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+border-radius: 4px;
+/* identical to box height, or 112% */
+
+
+color: #000000;
+background-color: white;
+
+
+}
+#bt3{
+margin-top: 250px;
+}
+.tooltip-button2{
+  border-color: #FFFFFF;
+  margin-top: 30px;
+  margin-left: 60px;
+  width: 76px;
+height: 34px;
+  padding: 8px;
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+  border-radius: 4px;
+/* identical to box height, or 112% */
+
+
+color: #000000;
+background-color: white;
+
+
+
+}
+.tooltip-button1{
+  border-color: #FFFFFF;
+  width: 76px;
+height: 34px;
+padding: 8px;
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+border-radius: 4px;
+/* identical to box height, or 112% */
+
+
+color: #000000;
+background-color: white;
+
+/* Inside auto layout */
+
+
+}
+.selected {
+  background-color: #007bff;
+}
+
