@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
+  const [tooltipImage, setTooltipImage] = useState('');
   const [tooltipText, setTooltipText] = useState('');
   const [tooltipStyle, setTooltipStyle] = useState({
     textSize: '14px',
     padding: '5px',
-    textColor: '#ffffff',
+    textColor: '#000000',
     backgroundColor: '#ffffff',
-    cornerRadius: '0px',
-    tooltipWidth: '0px',
+    cornerRadius: '4px',
+    tooltipWidth: '150px',
     arrowWidth: '0px',
     arrowHeight: '0px',
   });
@@ -23,7 +24,9 @@ const App = () => {
     const { name, value } = event.target;
     setTooltipStyle((prevStyle) => ({ ...prevStyle, [name]: value }));
   };
-
+  const handleImageChange = (event) => {
+    setTooltipImage(event.target.value);
+  };
   const handleButtonSelect = (event) => {
     setSelectedButton(event.target.value);
   };
@@ -31,11 +34,13 @@ const App = () => {
   const tooltip = {
     text: tooltipText,
     style: tooltipStyle,
+    image: tooltipImage
   };
 
   return (
     <div className="app">
       <div className="form">
+      
       <div><label htmlFor="text">Target Element</label></div>
       <input
       style = {{width: 547}}
@@ -54,7 +59,7 @@ const App = () => {
         /></div>
 
         <label htmlFor="textSize">Text Size:</label>
-        <label className="in" htmlFor="padding"> Padding:</label><br/>
+        <label className="ind" htmlFor="padding"> Padding:</label><br/>
         <input
         className="inp"
         style = {{width: 236}}
@@ -141,8 +146,16 @@ const App = () => {
           value={tooltipStyle.arrowWidth}
           onChange={handleStyleChange}
         />
+        <br/>
+      <label htmlFor="image">Tooltip Image URL:</label>
+        <input
+          style = {{width: 547}}
+          type="text"
+          id="image"
+          value={tooltipImage}
+          onChange={handleImageChange}
+        />
       </div>
-
       
     
       <div className="tooltip-preview">
@@ -164,6 +177,8 @@ const App = () => {
             width: tooltip.style.tooltipWidth,
           }}
         >
+          <img src={tooltip.image}/>
+          
           {tooltip.text}
           {console.log({selectedButton})};
           <span
@@ -193,6 +208,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
+      <img src={tooltip.image} alt="Tooltip Image" />
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
@@ -221,6 +237,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
+      <img src={tooltip.image} alt="Tooltip Image" />
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
@@ -249,6 +266,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
+      <img src={tooltip.image}/>
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
@@ -277,6 +295,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
+      <img src={tooltip.image} alt="Tooltip Image" />
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
