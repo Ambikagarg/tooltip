@@ -44,11 +44,11 @@ const App = () => {
       <select style = {{width: 547}} value={selectedButton}
         onChange={handleButtonSelect} id="cars" name="button">
         <option value="">select button</option>
-        <option value="button1">button1</option>
-        <option value="button2">button2</option>
-        <option value="button3">button3</option>
-        <option value="button4">button4</option>
-        <option value="button5">button5</option>
+        <option value="Button 1">button1</option>
+        <option value="Button 2">button2</option>
+        <option value="Button 3">button3</option>
+        <option value="Button 4">button4</option>
+        <option value="Button 5">button5</option>
       </select>
       
         <div><label htmlFor="text">Tooltip Text:</label></div>
