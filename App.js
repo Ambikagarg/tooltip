@@ -40,15 +40,17 @@ const App = () => {
   return (
     <div className="app">
       <div className="form">
-      
       <div><label htmlFor="text">Target Element</label></div>
-      <input
-      style = {{width: 547}}
-        type="text"
-        id="text"
-        value={selectedButton}
-        onChange={handleButtonSelect}
-      />
+      <select style = {{width: 547}} value={selectedButton}
+        onChange={handleButtonSelect} id="cars" name="button">
+        <option value="">select button</option>
+        <option value="button1">button1</option>
+        <option value="button2">button2</option>
+        <option value="button3">button3</option>
+        <option value="button4">button4</option>
+        <option value="button5">button5</option>
+      </select>
+      
         <div><label htmlFor="text">Tooltip Text:</label></div>
         <div><input
         style = {{width: 547}}
@@ -177,10 +179,10 @@ const App = () => {
             width: tooltip.style.tooltipWidth,
           }}
         >
-          <img src={tooltip.image}/>
+          { tooltipImage  && (<img src={tooltip.image} alt="Tooltip Image" />)}
           
-          {tooltip.text}
-          {console.log({selectedButton})};
+          <span className='texttool'>{tooltip.text}</span>
+          
           <span
                 className={`tooltip-arrow`}
         style={{
@@ -208,7 +210,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
-      <img src={tooltip.image} alt="Tooltip Image" />
+      { tooltipImage  && (<img src={tooltip.image} alt="Tooltip Image" />)}
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
@@ -237,7 +239,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
-      <img src={tooltip.image} alt="Tooltip Image" />
+      { tooltipImage  && (<img src={tooltip.image} alt="Tooltip Image" />)}
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
@@ -266,7 +268,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
-      <img src={tooltip.image}/>
+      { tooltipImage  && (<img src={tooltip.image} alt="Tooltip Image" />)}
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
@@ -295,7 +297,7 @@ const App = () => {
         width: tooltip.style.tooltipWidth,
       }}
     >
-      <img src={tooltip.image} alt="Tooltip Image" />
+      { tooltipImage  && (<img src={tooltip.image} alt="Tooltip Image" />)}
       {tooltip.text}
       <span
         className={`tooltip-arrow ${selectedButton}`}
