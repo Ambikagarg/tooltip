@@ -42,13 +42,13 @@ const App = () => {
       <div className="form">
       <div><label htmlFor="text">Target Element</label></div>
       <select style = {{width: 547}} value={selectedButton}
-        onChange={handleButtonSelect} id="cars" name="button">
+        onChange={handleButtonSelect} id="buttons" name="button">
         <option value="">select button</option>
-        <option value="Button 1">button1</option>
-        <option value="Button 2">button2</option>
-        <option value="Button 3">button3</option>
-        <option value="Button 4">button4</option>
-        <option value="Button 5">button5</option>
+        <option value="button1">Button 1</option>
+        <option value="button2">Button 2</option>
+        <option value="button3">Button 3</option>
+        <option value="button4">Button 4</option>
+        <option value="button5">Button 5</option>
       </select>
       
         <div><label htmlFor="text">Tooltip Text:</label></div>
@@ -179,9 +179,9 @@ const App = () => {
             width: tooltip.style.tooltipWidth,
           }}
         >
-          { tooltipImage  && (<img src={tooltip.image} alt="Tooltip Image" />)}
+          { tooltipImage  && (<img className='centered-image' src={tooltip.image} alt="Tooltip Image" />)}
           
-          <span className='texttool'>{tooltip.text}</span>
+          <span className='centered-text'>{tooltip.text}</span>
           
           <span
                 className={`tooltip-arrow`}
